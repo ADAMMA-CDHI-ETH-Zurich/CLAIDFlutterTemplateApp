@@ -1,0 +1,15 @@
+{
+  "hosts": [{
+    "hostname": "Smartphone",
+    "is_server": false,
+    "connect_to": "",
+    "modules": [
+      {
+        "type": "TestStreamModule",
+        "id": "MyFirstModule",
+        "output_channels": {"MyData" :  "MyData"}
+      }
+    ]
+  }
+  ]
+}
