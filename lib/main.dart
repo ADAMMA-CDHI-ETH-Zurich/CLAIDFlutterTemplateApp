@@ -43,15 +43,13 @@ class _MyHomePageState extends State<MyHomePage>
   void initState() {
     super.initState();
 
-    CLAID.registerModule("TestStreamModule", TestStreamModule.new);
-    CLAID.registerViewClassForModule("TestStreamModule", TestStreamView.new);
-
-    CLAID.startInForeground(
+    CLAID.startInBackground(
         configFilePath: "assets://flutter_assets/assets/claid_test.json",
         hostId: "Smartphone",
         userId: "test_user",
         deviceId: "test_id",
         specialPermissionsConfig: CLAIDSpecialPermissionsConfig.regularConfig(),
+        persistanceConfig: CLAIDPersistanceConfig.maximumPersistance(),
         claidPackages: []
     ).then((value) => setState(() {
       claidStarted = true;
