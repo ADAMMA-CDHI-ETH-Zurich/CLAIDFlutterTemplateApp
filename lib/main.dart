@@ -43,6 +43,11 @@ class _MyHomePageState extends State<MyHomePage>
   void initState() {
     super.initState();
 
+    CLAID.registerModule("TestStreamModule", () => TestStreamModule());
+    CLAID.registerViewClassForModule("TestStreamModule", TestStreamView.new);
+
+    // Don't worry if this get's called multiple times.
+    // CLAID will detect if it is already running.
     CLAID.startInBackground(
         configFilePath: "assets://flutter_assets/assets/claid_test.json",
         hostId: "Smartphone",
