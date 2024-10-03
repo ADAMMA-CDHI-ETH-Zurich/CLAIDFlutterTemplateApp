@@ -1,15 +1,17 @@
 {
-  "hosts": [{
-    "hostname": "Smartphone",
-    "is_server": false,
-    "connect_to": "",
-    "modules": [
-      {
-        "type": "TestStreamModule",
-        "id": "MyFirstModule",
-        "output_channels": {"MyData" :  "MyData"}
-      }
-    ]
-  }
+  "hosts": [
+    {
+      "hostname": "Smartphone",
+      "modules": [{
+        "type": "LocationSensorModule",
+        "id": "MyModule",
+        "output_channels": {"LocationChannel":  "LocationChannel"},
+        "properties":
+        {
+          "minTimeBetweenUpdatesMilliseconds": 1000,
+          "minDistanceBetweenUpdatesMeters": 2.0
+        }
+      }]
+    }
   ]
 }

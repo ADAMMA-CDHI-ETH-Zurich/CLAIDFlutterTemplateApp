@@ -50,9 +50,9 @@ class _MyHomePageState extends State<MyHomePage>
     // CLAID will detect if it is already running.
     CLAID.startInBackground(
         configFilePath: "assets://flutter_assets/assets/claid_test.json",
-        hostId: "Smartphone",
-        userId: "test_user",
-        deviceId: "test_id",
+        hostId: "Smartphone",   // Host name
+        userId: "user01",    // Unique user id
+        deviceId: "my_device",    // Device name
         specialPermissionsConfig: CLAIDSpecialPermissionsConfig.regularConfig(),
         persistanceConfig: CLAIDPersistanceConfig.maximumPersistance(),
         claidPackages: []

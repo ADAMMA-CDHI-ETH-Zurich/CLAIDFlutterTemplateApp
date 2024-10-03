@@ -110,6 +110,7 @@ class _TestStreamViewState extends State<TestStreamView> with AutomaticKeepAlive
         )
     );
   }
+
   bool get wantKeepAlive => true;
 
 
