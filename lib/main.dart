@@ -4,6 +4,8 @@ import 'package:claid/CLAID.dart';
 
 import 'package:flutter/material.dart';
 
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'TestStreamModule.dart';
 import 'TestStreamView.dart';
 
@@ -20,6 +22,15 @@ class MyApp extends StatelessWidget
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'CLAID App',
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'), // English
+      ],
+      locale: const Locale('en'),
       theme: ThemeData(
         useMaterial3: true,
       ),
